@@ -1,46 +1,6 @@
-<div>
-
-	<h2> The Red Planet Rovers </h2>
-	<button class="btn btn-primary float-right" ng-click="getImageOfTheDay()">
-            Image Of The Day
-    </button>
-	<button class="btn btn-primary float-right" ng-click="getGalleryData()">
-            Image Gallery
-    </button>
-</div>
-<hr>
-
-<div ng-show="imageOfTheDayShow">
-	<img ng-src="imageOfTheDay" alt="Image Of The Day" />
-</div>
-
-<div ng-show="galleryDataShow">
-	<h2> Curiosity: {{selectedCamera}} </h2>
-	<div>
-		<select ng-model="selectedCamera" ng-options="curiosity.camera.full_name for curiosity.camera.full_name in curiosityData">
-            <option value="">Camera Name</option>
-        </select>
-	</div>
-	
-	<div>
-		<ul style="display:inline">
-			<li ng-repeat="curiosity for curiosity in curiosityData | filter: { full_name:  selectedCamera}"><img ng-src="curiosity.img_src"/></li>
-		</ul>
-	</div>
-
-	<h2> Opportunity: {{selectedOpportunity}} </h2>
-	<div>
-		<select ng-model="selectedOpportunityCamera" ng-options="opportunity.camera.full_name for opportunity.camera.full_name in opportunityData">
-            <option value="">Camera Name</option>
-        </select>
-	</div>
-	
-	<div>
-		<ul style="display:inline">
-			<li ng-repeat="opportunity for opportunity in opportunityData | filter: { full_name:  selectedOpportunityCamera}"><img ng-src="opportunity.img_src"/></li>
-		</ul>
-	</div>
-	
-	</div>
-	
+﻿<div>
+    <h1>Welcome to Policy Configuration Console</h1>
+    <div>
+        <p>Select the options from the left pane</p>
+    </div>
 </div>
